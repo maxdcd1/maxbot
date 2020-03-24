@@ -66,7 +66,17 @@ bot.on("ready", () => {
 
 bot.on("message", async message => {
   if (message.author.bot) return;
-  console.log(`${message.author.username} : ${message.cleanContent}`); //pokazuje nick z wiadomoscia
+        if(message.attachments.size == 0){
+          console.log(`${message.author.username} : ${message.cleanContent}`); //pokazuje nick z wiadomoscia
+        }
+        else if(message.attachments.size > 0){
+          var Attachment = (message.attachments).array();
+          console.log(`${message.author.username} : ${message.cleanContent} ${Attachment[0].url}`); //wiadomosc z URL
+        }
+        else console.log("ERROR: nowy typ wiadomosci?");
+
+
+    //commands start
   let messageArray = message.content.split(/\s+/g);
   let command = messageArray[0];
   let args = messageArray.slice(1);
