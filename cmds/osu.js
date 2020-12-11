@@ -1,6 +1,5 @@
 module.exports.run = async (bot, message, args) => {
   const osu = require('node-osu');
-  const config = require("./config.json");
 	const api = new osu.Api(process.env.OSU , { //api osu
 	  notFoundAsError: true,
 	  completeScores: false 
@@ -13,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
 api.getUser({u: username}).then(user => {
   const embed = new (require('discord.js').RichEmbed)()
   .setTitle('User Osu Search System')
-  .setDescription(`OwO Osu ?`)
+  .setDescription(`Basic player info`)
   .setThumbnail(`http://s.ppy.sh/a/${user.id}}`)
   .setColor("#D0436A")
   .addField('Nickname', user.name, true)

@@ -1,6 +1,5 @@
 const discord = require("discord.js");
 const Util = require("discord.js");
-// const config = require("./config.json");
 require('dotenv').config()
 const YTDL = require("ytdl-core");
 const YouTube = require("simple-youtube-api");
