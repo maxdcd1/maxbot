@@ -1,6 +1,7 @@
 module.exports.run = async (bot, message, args) => {
-	const osu = require('node-osu');
-	const api = new osu.Api("" , { //api osu
+  const osu = require('node-osu');
+  const config = require("./config.json");
+	const api = new osu.Api(process.env.OSU , { //api osu
 	  notFoundAsError: true,
 	  completeScores: false 
 	});

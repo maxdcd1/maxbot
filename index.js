@@ -1,12 +1,13 @@
 const discord = require("discord.js");
 const Util = require("discord.js");
-const config = require("./config.json");
+// const config = require("./config.json");
+require('dotenv').config()
 const YTDL = require("ytdl-core");
 const YouTube = require("simple-youtube-api");
-const youtube = new YouTube(config.youtubeApi); //api youtube
+const youtube = new YouTube(process.env.YOUTUBEAPI); //api youtube
 const fs = require("fs");
 const bot = new discord.Client({ disableEveryone: true });
-const prefix = config.prefix;
+const prefix = process.env.PREFIX;
 const queue = new Map();
 
 bot.commands = new discord.Collection();
@@ -276,4 +277,4 @@ function play(guild, song) {
   //muzyka stop
 }
 
-bot.login(config.token);
+bot.login(process.env.TOKEN);
