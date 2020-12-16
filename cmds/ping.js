@@ -1,6 +1,5 @@
 module.exports.run = async (bot, message, args) => {
-	//message.reply("pong");
-	//message.channel.send('pong');
+	//Check latency between the bot and discord.
 	const Discord = require("discord.js");
 	const client = new Discord.Client();
 	const m = await message.channel.send("Ping?");

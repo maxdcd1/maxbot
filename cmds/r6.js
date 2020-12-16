@@ -2,12 +2,13 @@ const snekfetch = require("snekfetch");
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
+  //Return useful info about Rainbow6Siege game player.
   /* *********************
 	WEBSITE SHUT DOWN, searching for alternatives
 	   *********************
 	*/
 
-  message.channel.send("Command out of order, website no longer exists.");
+  message.channel.send("Command out of order, website no longer exists. Please await update");
 
   //code
   // 	let nick=args[0];

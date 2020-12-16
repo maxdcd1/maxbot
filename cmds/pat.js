@@ -3,6 +3,7 @@ const snekfetch = require("snekfetch");
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
+    //Pat somebody.
 const api = `https://nekos.life/api/pat`;
 snekfetch.get(api).then(r =>{
 

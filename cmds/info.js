@@ -1,4 +1,5 @@
 module.exports.run = async (bot, message, args) => {
+    //Shows info about user.
     const discord = require("discord.js");
 let embed = new discord.RichEmbed()
     .setAuthor(message.author.username)

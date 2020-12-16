@@ -1,4 +1,5 @@
 module.exports.run = async (bot, message, args) => {
+	//Return a random number between two user choices.
 	let pierwsza=args[0];
 	let druga=args[1];
 	var pierwszaliczba = parseInt(pierwsza, 10);

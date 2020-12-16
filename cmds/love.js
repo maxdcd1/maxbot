@@ -1,4 +1,5 @@
 module.exports.run = async (bot, message, args) => {
+  //Just a "fun" command, takes ID of two users and compares them which results in a "love meter".
   let firstMention = msg.mentions.members.first();
   let lastMention = msg.mentions.members.last();
   if (msg.mentions.members.size === 1) lastMention = msg.member;

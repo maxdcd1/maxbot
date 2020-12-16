@@ -1,6 +1,6 @@
 module.exports.run = async (bot, message, args) => {
+    //Returns users avatar.
     const Discord = require("discord.js");
-    //message.reply(message.author.avatarURL);
     const user = message.mentions.users.first() || message.author;
     const avatarEmbed = new Discord.RichEmbed()
         .setColor(0x333333)
