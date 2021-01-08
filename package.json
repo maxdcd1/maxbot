@@ -20,6 +20,6 @@
     "simple-youtube-api": "^5.1.1",
     "snekfetch": "^4.0.4",
     "unirest": "^0.6.0",
-    "ytdl-core": "^4.4.0"
+    "ytdl-core": "^4.4.1"
   }
 }
